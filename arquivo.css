@@ -6,8 +6,12 @@
 }
 
 body {
-    background-image: url('https://picsum.photos/1920/1080');
+    /* Usa a imagem enviada como fundo ocupando toda a tela. */
+    background-image: url("./assest/fundo\ preto.jpeg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +20,8 @@ body {
 
 .container {
     padding: 20px;
-    background-color: #ffffffff;
+    /* Mantém a área principal branca e totalmente opaca. */
+    background-color: #ffffff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -35,17 +40,34 @@ body {
 
 
 button {
-    padding: 10px;
+    /* Mantém os três botões com o mesmo tamanho, independentemente do conteúdo. */
+    width: 86px;
+    height: 86px;
+    padding: 0;
     font-size: 50px;
     cursor: pointer;
     border-radius: 20px;
-    border: 3px solid transparent;
+    border: none;
+    overflow: hidden;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: opacity 0.5s ease-in-out;
 }
 
 button:hover {
     opacity: 0.7;
+}
+
+/* Faz a imagem preencher o botão e acompanhar seus cantos arredondados. */
+button img {
+    /* Avança 10 px para cobrir completamente as bordas internas do botão. */
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    margin: -10px;
+    object-fit: cover;
+    display: block;
 }
 
 
