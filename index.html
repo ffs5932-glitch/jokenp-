@@ -2,42 +2,55 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Define a codificação da página e deixa o site responsivo em celulares -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Conecta o HTML com o arquivo CSS que deixa o jogo bonito -->
     <link rel="stylesheet" href="./arquivo.css">
+
+    <!-- Título que aparece na aba do navegador -->
     <title>jokenpô</title>
 </head>
 
 <body>
-    
+    <!-- Caixa principal centralizada com todo o conteúdo do jogo -->
     <div class="container">
-        <h1> jokenpô</h1>
+        <h1>jokenpô</h1>
 
+        <!-- Botões para o jogador escolher pedra, papel ou tesoura -->
         <div class="buttons">
+            <button id="rock" onclick="playHuman('rock')">
+                <img src="./assest/pedra 2.jpeg" alt="pedra">
+            </button>
 
-            <button id="rock" onclick="playHuman('rock')"> <img src="./assest/pedra 2.jpeg" alt="pedra" ></button>
-            <button id="paper" onclick="playHuman('paper')"> <img src="./assest/paper.webp" alt="Papel"></button>
+            <button id="paper" onclick="playHuman('paper')">
+                <img src="./assest/paper.webp" alt="Papel">
+            </button>
 
-            <button id="scissors" onclick="playHuman('scissors')"> <img src="./assest/tesoura.jpeg" alt="tesoura" ></button>
+            <button id="scissors" onclick="playHuman('scissors')">
+                <img src="./assest/tesoura.jpeg" alt="tesoura">
+            </button>
         </div>
 
-   <p class="result"></p>
+        <!-- Pega o resultado da rodada, como empate, vitória ou derrota -->
+        <p class="result"></p>
 
-        <p class="your-score"><b>Sua Pontuação</b>
+        <!-- Mostra a pontuação do jogador -->
+        <p class="your-score">
+            <b>Sua Pontuação</b>
             <spam id="human-score"><b>:0</b></spam>
         </p>
-        <p class="machine-score"> <b>Pontuação da IA</b>
+
+        <!-- Mostra a pontuação da máquina/IA -->
+        <p class="machine-score">
+            <b>Pontuação da IA</b>
             <spam id="machine-score"><b>:0</b></spam>
         </p>
-
     </div>
 
-
-
-
-
-
+    <!-- Importa o JavaScript que controla a lógica do jogo -->
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
